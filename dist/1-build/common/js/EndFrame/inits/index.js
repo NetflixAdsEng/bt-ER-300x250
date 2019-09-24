@@ -35,5 +35,5 @@ function cornerInit(T) {
 }
 
 function oneLineInit(T) {
-  baseInit(T, { logoWidth: 75, ctaWidth: 83, ctaMaxWidth: 90, ctaHeight: 22 });
+  baseInit(T, { logoWidth: 85, ctaWidth: 83, ctaMaxWidth: 90, ctaHeight: 22 });
 }
