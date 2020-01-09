@@ -25,27 +25,30 @@ export class Ad {
 
 
 		View.main = new Main()
+if (adData.useSupercut && Device.type === 'desktop') {
+	View.intro = new Intro({ target: View.main })
+}
+
 View.endFrame = new EndFrame({
 	
 	target: View.main,
 	layout: window.Creative && Creative.layout
 })
 
-View.ribbon = new NetflixRibbon()
-View.ribbon.addEventListener('coverComplete', function(event) {
-	event.stopImmediatePropagation() // this event was coming through twice
-	Animation.playIntro()
-})
+if (adData.useRibbon) {
+	View.ribbon = new NetflixRibbon()
+	View.ribbon.addEventListener('coverComplete', function(event) {
+		event.stopImmediatePropagation() // this event was coming through twice
+		Animation.hideEndFrame()
+		Animation.playIntro()
+	})
 
-View.ribbon.addEventListener('leftPillarComplete', function(event) {
-	event.stopImmediatePropagation() // this event was coming through twice
-	if (!adData.useSupercut) {
-		Animation.playCreative()
-	}
-})
-
-if (adData.useSupercut && Device.type === 'desktop') {
-	View.intro = new Intro({ target: View.main })
+	View.ribbon.addEventListener('leftPillarComplete', function(event) {
+		event.stopImmediatePropagation() // this event was coming through twice
+		if (!adData.useSupercut) {
+			Animation.playCreative()
+		}
+	})
 }
 
 View.mainBorder = new MainBorder()

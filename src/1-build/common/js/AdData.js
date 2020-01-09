@@ -40,10 +40,14 @@ export default function AdData() {
 
 	}
 
+self.useRibbon = MonetUtils.getDataByKey('Toggle_Ribbon')
 self.useSupercut = MonetUtils.getDataByKey('Toggle_Supercut')
 self.isRTL = MonetUtils.getDataByKey('Toggle_Right-To-Left_Language')
 self.hasTT = !!MonetUtils.getDataByKey('Title_Treatment')
 self.retinaTT = !!MonetUtils.getDataByKey('Double_Density_Title_Treatment')
+
+// indicates whether ad is on endframe state
+self.onEndFrame = false
 
 
 }
