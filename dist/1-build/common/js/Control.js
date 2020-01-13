@@ -25,10 +25,14 @@ Gesture.add(View.endFrame, GestureEvent.CLICK, Control.handleClick)
 		View.endFrame.hide()
 		
 Gesture.add(View.endFrame, GestureEvent.OVER, function() {
-	View.endFrame.cta.mouseover()
+	if (adData.onEndframe) {
+		View.endFrame.cta.mouseover()
+	}
 })
 Gesture.add(View.endFrame, GestureEvent.OUT, function() {
-	View.endFrame.cta.mouseout()
+	if (adData.onEndframe) {
+		View.endFrame.cta.mouseout()
+	}
 })
 
 
