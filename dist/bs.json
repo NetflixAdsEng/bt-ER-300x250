@@ -1,5 +1,4 @@
 {
-  "name": "src",
   "build_size": "300x250",
   "build_source": {
     "build_source_path": "./c20-builder/c20-builder-300x250/"
@@ -7,10 +6,10 @@
   "build_source_options": {
     "stub_paths": []
   },
-  "output": "/Users/derek.miranda/Internal/c20/build-templates-PROD/bt-ER-300x250",
-  "filters": {},
-  "id": "Container 2.0 - 300x250",
-  "bsid": "d03f8863-f3aa-433c-a9eb-cd483c58bb98",
   "processing": false,
+  "id": "Container 2.0 - 300x250",
+  "name": "Container 2.0 - 300x250",
+  "output": "/Users/derek.miranda/Internal/build-source-assembler/build_sources_output",
+  "bsid": "3c6d92dd-4db1-42a8-880b-1648ee44fdd7",
   "error": false
 }
