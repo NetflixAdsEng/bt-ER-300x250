@@ -25,7 +25,6 @@ import {
 } from "ad-ui";
 import { ObjectUtils } from "ad-utils";
 
-/*-- Red.Component.class.start --*/
 export function Main() {
   var T = Markup.get("main");
   Styles.setCss(T, {
@@ -38,16 +37,13 @@ export function Main() {
     overflow: "hidden",
     userSelect: "none"
   });
-  /*-- Red.Component.main_content.start --*/
   Styles.setCss(T, { backgroundColor: "#000000" });
 
-  /*-- Red.Component.main_content.end --*/
   return T;
 }
 
 // ==============================================================================================================
 export function Intro(arg) {
-  /*-- Red.Component.intro_component_init.start --*/
   const base = {
     id: "intro-container",
     css: {
@@ -56,9 +52,7 @@ export function Intro(arg) {
     }
   };
   const T = new UIComponent(ObjectUtils.defaults(arg, base, true));
-  /*-- Red.Component.intro_component_init.end --*/
 
-  /*-- Red.Component.intro_content.start --*/
   // video
   T.introVideoPlayer = document.createElement("netflix-video");
   T.introVideoPlayer.id = "intro-video";
@@ -96,14 +90,11 @@ export function Intro(arg) {
     });
   };
 
-  /*-- Red.Component.intro_content.end --*/
-
   return T;
 }
 
 // ==============================================================================================================
 export function EndFrame(arg) {
-  /*-- Red.Component.endframe_component_init.start --*/
   const base = {
     id: "end-frame-container",
     css: {
@@ -119,9 +110,6 @@ export function EndFrame(arg) {
 
   T.subLayer.appendChild(T);
 
-  /*-- Red.Component.endframe_component_init.end --*/
-
-  /*-- Red.Component.endframe_content.start --*/
   let endFrameInit = sideBySideInit;
   switch (arg.layout) {
     // these use the default init function
@@ -155,8 +143,6 @@ export function EndFrame(arg) {
 
   T.postMarkupStyling = postMarkup;
 
-  /*-- Red.Component.endframe_content.end --*/
-
   return T;
 }
 
@@ -177,5 +163,3 @@ export function MainBorder() {
     color: "#000000"
   });
 }
-
-/*-- Red.Component.class.end --*/

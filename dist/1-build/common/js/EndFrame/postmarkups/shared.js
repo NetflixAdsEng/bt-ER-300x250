@@ -47,7 +47,7 @@ export function sideBySideBrandingLockup(
 
   // hotfix: prevent CTA copy container alignment for now
   const ctaLocale = Monet.getComponentLocale("text.CTA");
-  if ((ctaLocale === "ar" || ctaLocale === "he") && T.cta.fontSize <= 8) {
+  if (ctaLocale === "ar" || ctaLocale === "he") {
     const copyEl = T.cta.querySelector(".copy");
     TweenLite.set(copyEl, { y: 0 });
   }
