@@ -114,6 +114,13 @@ export function stackedBrandingLockup(
   // positioning CTA atop logo
   T.cta.resize();
 
+  // hotfix: prevent CTA copy container alignment for now
+  const ctaLocale = Monet.getComponentLocale("text.CTA");
+  if (ctaLocale === "ar" || ctaLocale === "he") {
+    const copyEl = T.cta.querySelector(".copy");
+    TweenLite.set(copyEl, { y: 0 });
+  }
+
   // switch typical CTA-logo orientation for RTL treatments
   const topEl = adData.isRTL ? T.netflixLogo : T.cta;
   const bottomEl = adData.isRTL ? T.cta : T.netflixLogo;
