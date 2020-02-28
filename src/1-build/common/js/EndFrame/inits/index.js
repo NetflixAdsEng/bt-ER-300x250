@@ -19,7 +19,12 @@ const extraCtaLogoInit = (cta, logo) => {
 }
 
 function cornerInit(T) {
-	baseInit(T, { logoWidth: 75, ctaWidth: 75, ctaHeight: 20, extraCtaLogoInit })
+	baseInit(T, {
+		logoWidth: 94,
+		ctaWidth: 94,
+		ctaMaxWidth: 94,
+		ctaHeight: 25
+	})
 }
 
 function oneLineInit(T) {

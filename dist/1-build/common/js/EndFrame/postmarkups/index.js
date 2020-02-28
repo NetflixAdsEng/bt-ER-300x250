@@ -22,17 +22,17 @@ function sideBySidePostMarkup() {
 
 function cornerLeftPostMarkup() {
 	verticalStacked({
-		tuneInFontSize: 14,
-		brandingLockupOffset: 11,
+		tuneInFontSize: 16,
+		brandingLockupOffset: 8,
 		brandingLockupElemXAlign: Align.CENTER,
 		brandingLockupAlign: {
 			x: {
 				type: Align.LEFT,
-				offset: 16
+				offset: 20
 			},
 			y: {
 				type: Align.BOTTOM,
-				offset: -16
+				offset: -10
 			}
 		}
 	})
@@ -40,17 +40,17 @@ function cornerLeftPostMarkup() {
 
 function cornerRightPostMarkup() {
 	verticalStacked({
-		tuneInFontSize: 14,
-		brandingLockupOffset: 11,
+		tuneInFontSize: 16,
+		brandingLockupOffset: 8,
 		brandingLockupElemXAlign: Align.CENTER,
 		brandingLockupAlign: {
 			x: {
 				type: Align.RIGHT,
-				offset: -16
+				offset: -20
 			},
 			y: {
 				type: Align.BOTTOM,
-				offset: -16
+				offset: -10
 			}
 		}
 	})
